@@ -3,6 +3,7 @@ import { SectionPill } from '../sub/sectionpill'
 import { Drama } from 'lucide-react'
 import Image from 'next/image'
 import { Socials } from '../sub/Socials'
+import { Feedback } from '../sub/feedback'
 
 export const AboutMe = () => {
   return (
@@ -18,6 +19,7 @@ export const AboutMe = () => {
                     </p>
                     <Socials/>
                 </div>
+                <Feedback/>
             </div>
         </div>
     </div>

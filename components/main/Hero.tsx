@@ -49,6 +49,7 @@ export const Hero = () => {
                         AnimateX Pro delivers the advanced tools, optimised performance, and creative freedom that professional developers and designers demand.
                         No compromises. No limits. Just pure, fluid motion that brings your boldest ideas to life.
                     </p>
+                
                     <div className="flex flex-col gap-6 md:flex-row w-[70%] items-center justify-center">
                         <PrimaryButton text='Components' className='w-full md:w-fit px-6 p-2 rounded-[10px]' type='link'/>
                         <Link className='link2' href={"#"}>Go Premium</Link>

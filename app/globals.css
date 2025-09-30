@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root{
   --bg: white;
@@ -17,6 +18,8 @@
   --secondary-hover: #f0f0f0;
  
 }
+
+
 
 .dark{
   --bg: #0b0b0f;
@@ -91,5 +94,8 @@ p{
 
 .link2{
   @apply p-[6px] rounded-md px-4 w-full md:w-40 bg-[var(--premium)] text-[var(--premium-text)] flex items-center justify-center
+}
+.title{
+  @apply text-2xl md:text-3xl
 }
 

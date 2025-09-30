@@ -7,7 +7,7 @@ import { Laptop, Moon, Sun } from 'lucide-react'
 export const ThemeWrapper = ({children}:{children:React.ReactNode}) => {
   return (
     <ThemeProvider
-    attribute={"class"}
+    attribute="class"
     defaultTheme='system'
     enableSystem={true}
     disableTransitionOnChange
@@ -42,7 +42,7 @@ export const ThemeToggler = () => {
     const [isOpen, setOpen] = useState(false)
     return (
         <div onClick={() => setOpen(!isOpen)} 
-        className='flex-center justify-center p-2 relative hover:bg-gray-300/6 cursor-pointer rounded-full'>
+        className='flex-center justify-center p-2 relative hover:bg-[var(--secondary-hover)] cursor-pointer rounded-full'>
             {theme === "dark" ? <Moon size={18}/> : theme === "light" ? <Sun size={18}/> : <Laptop size={18}/>}
            {
               isOpen &&

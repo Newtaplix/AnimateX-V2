@@ -55,7 +55,7 @@ export const Pricing = () => {
                                 )
                             }
                         </div>
-                        <PrimaryButton text='Get Now'/>
+                        <PrimaryButton text='Get Now' type='button'/>
                     </div>
 
                     <div className="p-[1px] relative h-fit w-full md:w-92">

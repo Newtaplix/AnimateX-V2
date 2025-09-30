@@ -23,10 +23,10 @@ export const Socials = () => {
         }
     ]
   return (
-    <div className='flex items-center justify-center gap-4 p-4'>
+    <div className='flex items-center justify-center gap-4'>
         {
             socials.map((social, i) => 
-            <Link href={social.link} key={i} className='p-[2px] rounded-full hover:bg-gray-300/10'>
+            <Link href={social.link} key={i} className='p-[2px] rounded-full hover:bg-[var(--secondary-hover)]'>
                 <Image src={social.icon} width={26} height={26} alt={social.icon}/>
             </Link>
             )
