@@ -24,7 +24,7 @@
 .dark{
   --bg: #0b0b0f;
   --fg: rgb(247, 244, 244);
-  --border: rgb(58, 59, 61);
+  --border: rgb(22, 22, 22);
   --primary: rgb(96, 165, 250); 
   --hover: rgb(66, 137, 252);
   --secondary: rgb(31, 30, 30);
@@ -83,6 +83,10 @@ p{
 .blue-gradient{
   @apply bg-linear-0 cursor-pointer from-blue-400 to-blue-500;
 }
+.blue-gradient-text{
+  @apply bg-linear-0 text-transparent bg-clip-text cursor-pointer from-blue-400 to-blue-500;
+}
+
 
 .section-head{
   @apply text-2xl md:text-3xl w-full text-center mx-auto md:w-[70%]
@@ -96,6 +100,17 @@ p{
   @apply p-[6px] rounded-md px-4 w-full md:w-40 bg-[var(--premium)] text-[var(--premium-text)] flex items-center justify-center
 }
 .title{
-  @apply text-2xl md:text-3xl
+  @apply text-xl md:text-2xl lg:text-3xl
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .title {
+    @apply text-lg;
+  }
+  
+  .section-head {
+    @apply text-xl;
+  }
 }
 

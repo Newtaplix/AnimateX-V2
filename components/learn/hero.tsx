@@ -5,20 +5,15 @@ import { PrimaryButton } from '../sub/primarybutton'
 
 export const LearnHero = () => {
   return (
-   <div className='gradient'>
-      <div className="center-container">
-        <div className='flex-col-center w-full md:w-[80%] mx-auto gap-2 justify-center h-screen md:h-[700px]'>
-          <SectionPill text="Learn with AnimateX" icon={<GraduationCap size={18}/>}/>
-          <h1 className='welcome w-[90%] text-center'>
-              Learn to Create Smooth, Modern Animations with Framer Motion
-          </h1>
-          <p className='text-center w-[95%] md:w-[70%]'>
-            Master modern web animations with Framer Motion. From simple transitions to advanced interactions, 
-              our step by step guides and examples make it easy to bring ideas to life.
-          </p>
-          <PrimaryButton text='Get Started'/>
-        </div>  
-      </div>    
-   </div>
+    <div className='flex-col-center gap-2 justify-center h-screen md:h-[700px] bg-red-400'>
+        <SectionPill text="Learn with AnimateX" icon={<GraduationCap size={18}/>}/>
+        <h1 className='welcome'>
+            Learn ot Create Smooth, Modern Animations with Framer Motion
+        </h1>
+        <p>Master modern web animations with Framer Motion. From simple transitions to advanced interactions, 
+            our step by step guides and examples make it easy to bring ideas to life.
+        </p>
+        <PrimaryButton text='Get Started'/>
+    </div>
   )
 }

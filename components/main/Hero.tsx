@@ -51,7 +51,7 @@ export const Hero = () => {
                     </p>
                 
                     <div className="flex flex-col gap-6 md:flex-row w-[70%] items-center justify-center">
-                        <PrimaryButton text='Components' className='w-full md:w-fit px-6 p-2 rounded-[10px]' type='link'/>
+                        <PrimaryButton text='Components' className='w-full md:w-fit px-6 p-2 rounded-[10px]' href={"/components"} type='link'/>
                         <Link className='link2' href={"#"}>Go Premium</Link>
                     </div>
                     <BuiltPill/>

@@ -26,6 +26,7 @@ const GooeyPage = () => {
         type='Pro' 
         codejs=''
         codets=''
+        usecasecode=''
         props={component.props}
         features={component.features} 
         component={<p>Text</p>}/>

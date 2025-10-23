@@ -10,7 +10,7 @@ interface props{
 
 const TextLinks = ({text, link}:props) => {
   return (
-    <m.div initial="initial" whileHover="hovers" className='w-fit h-fit pb-[1px] relative'>
+    <m.div initial="initial" whileHover="hovers" className='w-fit h-fit pb-[2px] relative'>
           <m.div variants={{
                 "initial": {opacity: 0 },
                 "hovers": {opacity: 1}
@@ -43,7 +43,7 @@ export const TextLink2 = ({text, link}:props) => {
 
 export const TextLink3 = ({text, link}:props) => {
   return (
-    <m.div initial="initial" whileHover="hovers" className='w-fit h-fit pb-[1px] relative'>
+    <m.div initial="initial" whileHover="hovers" className='w-fit h-fit pb-[2px] relative'>
           <m.div variants={{
                 "initial": {opacity: 0 },
                 "hovers": {opacity: 1}
