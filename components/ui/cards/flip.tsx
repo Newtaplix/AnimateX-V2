@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import Image from 'next/image'
-import clsx from 'clsx'
+import { cn } from '@/app/lib/utils'
 
 
 interface flipProps{
@@ -23,7 +23,7 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
    <m.div 
    whileHover={"hovered"} initial="idle" onMouseEnter={() => setRaduis(finalSubSpread)} 
    onMouseLeave={() => setRaduis(iniSubSpread)} 
-    className={clsx('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
+    className={cn('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
 
         {/* rotating card */}
         <m.div variants={{
@@ -55,14 +55,14 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
                     subImages.map((img, i) => 
                         <m.div
                         animate={{
-                            x: raduis * Math.cos((i * 2 * Math.PI) / 6),
-                            y: raduis * Math.sin((i * 2 * Math.PI) / 6),
+                            x: raduis * Math.cos((i * 2 * Math.PI) / subImages.length),
+                            y: raduis * Math.sin((i * 2 * Math.PI) / subImages.length),
                             z: i * 20
                         }}
                         transition={{
                             duration: flipDuration
                         }}
-                        className={clsx('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
+                        className={cn('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
                             subStyle && subStyle
                         )}>
                             <div className='h-full w-full relative'>
@@ -100,7 +100,7 @@ export const CodeTS = `
 import React, { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import Image from 'next/image'
-import clsx from 'clsx'
+import { cn } from '@/app/lib/utils'
 
 
 interface flipProps{
@@ -121,7 +121,7 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
    <m.div 
    whileHover={"hovered"} initial="idle" onMouseEnter={() => setRaduis(finalSubSpread)} 
    onMouseLeave={() => setRaduis(iniSubSpread)} 
-    className={clsx('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
+    className={cn('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
 
         {/* rotating card */}
         <m.div variants={{
@@ -160,7 +160,7 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
                         transition={{
                             duration: flipDuration
                         }}
-                        className={clsx('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
+                        className={cn('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
                             subStyle && subStyle
                         )}>
                             <div className='h-full w-full relative'>
@@ -182,7 +182,7 @@ export const CodeJS = `
 
 import React, { useState } from 'react'
 import { motion as m } from 'framer-motion'
-import clsx from 'clsx'
+import { cn } from '@/app/lib/utils'
 
 
 export const Flip = ({subImages=[""], mainStyle, subStyle,
@@ -193,7 +193,7 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
    <m.div 
    whileHover={"hovered"} initial="idle" onMouseEnter={() => setRaduis(finalSubSpread)} 
    onMouseLeave={() => setRaduis(iniSubSpread)} 
-    className={clsx('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
+    className={cn('p-2 w-70 h-90 rounded-md relative', mainStyle && mainStyle)}>
 
         {/* rotating card */}
         <m.div variants={{
@@ -232,7 +232,7 @@ export const Flip = ({subImages=[""], mainStyle, subStyle,
                         transition={{
                             duration: flipDuration
                         }}
-                        className={clsx('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
+                        className={cn('top-0 translate-y-1/2 w-30 h-40 left-0 overflow-hidden right-0 mx-auto rounded-md absolute',
                             subStyle && subStyle
                         )}>
                             <div className='h-full w-full relative'>

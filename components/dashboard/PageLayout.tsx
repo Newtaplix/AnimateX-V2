@@ -120,7 +120,7 @@ const PageLayout = ({title, variants,
                                     <span className='w-3 h-3 rounded-full bg-red-500'></span>
                                 </div> */}
                                 <div key={key}
-                                className='min-h-[300px] md:min-h-[480px] flex-center justify-center relative gradient p-2 bg-[var(--bg)] border border-col rounded-[6px] w-full'>
+                                className='min-h-[490px] md:min-h-[480px] flex-center justify-center relative gradient p-2 bg-[var(--bg)] border border-col rounded-[6px] w-full'>
                                         {
                                             current === "Preview" &&
                                             <button onClick={Reload} className='p-2 cursor-pointer bg-[var(--bg)] rounded-md absolute top-2 right-2'><RefreshCcw/></button>

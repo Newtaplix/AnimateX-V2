@@ -95,7 +95,7 @@ export const CopyButton: React.FC<buttonProps> = ({className, onClick, iconSize 
     Copying ?
     { pointerEvents: "none" } : {}
    }
-   className={cn('flex gap-2 items-center p-2 px-6 rounded-full hover:bg-gray-300 hover:dark:bg-neutral-800 cursor-pointer bg-gray-200 text-black dark:bg-neutral-900 dark:text-white', 
+   className={cn('flex gap-2 items-center overflow-hidden p-2 px-6 rounded-full hover:bg-gray-300 hover:dark:bg-neutral-800 cursor-pointer bg-gray-200 text-black dark:bg-neutral-900 dark:text-white', 
                 className && className
    )}>
        <AnimatePresence mode='popLayout'>

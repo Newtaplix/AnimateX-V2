@@ -1,6 +1,7 @@
 import PageLayout from '@/components/dashboard/PageLayout'
 import { InfiniteZ } from '@/components/ui/carousels/infinitez'
 import React from 'react'
+import { SwirlHeader } from '@/components/library/sections/headers/swirl'
 
 const InfiniteZPage = () => {
     const images = [
@@ -32,7 +33,7 @@ const InfiniteZPage = () => {
         usecasecode=''
         props={component.props}
         features={component.features} 
-        component={<InfiniteZ/>}/>
+        component={<SwirlHeader/>}/>
     </div>
   )
 }
