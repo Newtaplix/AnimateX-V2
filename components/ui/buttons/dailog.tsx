@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion as m, Variants } from 'framer-motion'
 import { X } from 'lucide-react'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 type DialogProps = React.HTMLAttributes<HTMLDivElement> & {
     children?: React.ReactNode,

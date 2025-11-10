@@ -2,7 +2,7 @@
 import { motion as m, Variants, AnimatePresence } from 'framer-motion'
 import { Check, CircleCheck, Copy } from 'lucide-react'
 import React, { HTMLAttributes, useState } from 'react'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 type buttonProps = HTMLAttributes<HTMLButtonElement> & {
     className?: string,

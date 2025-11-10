@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import Image from 'next/image'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 
 interface flipProps{

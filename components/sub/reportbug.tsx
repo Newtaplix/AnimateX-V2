@@ -2,7 +2,7 @@
 import { BadgeCheck, Bug, Loader2, X } from 'lucide-react'
 import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion as m, Variants } from 'framer-motion'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 
 interface bugprops{

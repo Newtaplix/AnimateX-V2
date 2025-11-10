@@ -2,7 +2,7 @@
 import { Loader, Loader2 } from 'lucide-react'
 import React from 'react'
 import { motion as m, AnimatePresence, Variants } from 'motion/react'
-import { cn } from '@/app/lib/utils'
+import { cn } from '@/lib/utils'
 
 
 
