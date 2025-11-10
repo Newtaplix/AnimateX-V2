@@ -40,12 +40,13 @@ interface pageprop{
     usecasecode: string,
     componentType?: string
     variants?: variants[],
-    sections?: sections[]
+    sections?: sections[],
+    installCode?: string
 }
 
 
 
-const PageLayout = ({title, variants, 
+const PageLayout = ({title, variants, installCode,
     description, component, type, sections, 
     codets, codejs, features=[""], props, usecasecode, componentType="block"}:pageprop) => {
     const [code, setCode] = useState({language: "tsx", code: codets})
@@ -53,7 +54,7 @@ const PageLayout = ({title, variants,
     const [using, setUsing] = useState("cli")
     const [key, setKey] = useState(0)
     
-    const dependencies = `npm i motion lucide-react tailwind-merge`
+    const dependencies = `npm i motion lucide-react tailwind-merge clsx`
 
     const utilsCode = `
             import { clsx, type ClassValue} from "clsx"
@@ -220,7 +221,7 @@ export function cn(...inputs: ClassValue[]) {
                                  <div className='absolute top-0 left-0 w-2 bg-[var(--secondary-hover)] rounded-r-xl h-8'/>
                                 <span className='mt-1'>Run the following command</span>
                         
-                                <CodeBlock language={"jsx"} code={`npm i CanvasCarousel animatex/v2`}/>
+                                <CodeBlock language={"jsx"} code={installCode ? installCode : ""}/>
                             </div>
 
                         }
@@ -261,7 +262,7 @@ export function cn(...inputs: ClassValue[]) {
                                                 )
                                             }
                                         
-                                            <div className={cn('h-full overflow-hidden', type !== "Pro" && "")}>
+                                            <div className={cn('h-full overflow-hidden overflow-y-scroll', type !== "Pro" && "")}>
                                                 <CodeBlock type='maincode' language={code.language} code={code.code}/>
                                             </div>
                                         </div>

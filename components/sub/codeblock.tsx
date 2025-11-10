@@ -19,7 +19,7 @@ const CodeBlock = ({code, language, type}:props) => {
     }
  
   return (
-     <div className='w-full h-full rounded-md overflow-hidden relative'>
+     <div className='w-full h-fit rounded-md overflow-hidden relative'>
           {
             type !== "maincode" &&
             <CopyButton 

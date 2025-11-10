@@ -1,5 +1,4 @@
 import PageLayout from '@/components/dashboard/PageLayout'
-import React from 'react'
 import { AeroButton, CodeJS,  Code, UseCase} from '@/components/ui/buttons/aerobutton'
 
 const FeedbackPage = () => {

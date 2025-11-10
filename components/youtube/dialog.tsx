@@ -1,7 +1,16 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+import { LoadingButton } from '../ui/buttons/loadingButton'
 
-export const Dialog = () => {
+const page = () => {
+   const [loading, setIsLoading] = useState(false)
+    const demo = () => {
+        setIsLoading(true)
+        setTimeout(() => setIsLoading(false), 5000)
+    }
   return (
-    <div>Dialog</div>
+    <LoadingButton onClick={demo} loading={loading} />
   )
 }
+
+export default page

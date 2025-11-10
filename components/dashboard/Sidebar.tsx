@@ -67,6 +67,11 @@ export const Sidebar = () => {
                     text: "Arrow Button",
                     link: "/components/arrow",
                     tag: "Pro"
+                },
+                 {
+                    text: "Loading",
+                    link: "/components/loadingbtn",
+                    tag: ""
                 }
             ]
         },
