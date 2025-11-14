@@ -317,9 +317,7 @@ export function cn(...inputs: ClassValue[]) {
                                 placeholder='Provide details about the issue..'></textarea>
                             </ReportBug>
                        </div>
-                       <div>
-                            <Footer/>
-                       </div>
+                       
                     </div>
             </div>
             </div>

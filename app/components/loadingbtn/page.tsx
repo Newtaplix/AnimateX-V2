@@ -61,7 +61,7 @@ const LoadingButtonPage = () => {
     type='Free' 
     codejs={codejs}
     codets={codets}
-    installCode="npm add LoadingButton"
+    installCode="npx add loadingbutton"
     usecasecode={usecase}
     props={component.props}
     variants={variants}
@@ -69,5 +69,7 @@ const LoadingButtonPage = () => {
     component={component.block}/>
   )
 }
+
+
 
 export default LoadingButtonPage

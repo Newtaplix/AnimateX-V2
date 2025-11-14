@@ -1,7 +1,6 @@
 import PageLayout from '@/components/dashboard/PageLayout'
 import { Swift } from '@/components/ui/carousels/swift'
-import React from 'react'
-
+import FloatingTestimonials from '@/components/ui/backgrounds/fadingImage'
 const InfiniteZPage = () => {
     const images = ["/demon/demon.jpeg", "/demon/muza.jpeg", "/demon/nezu.jpeg",
       "/demon/pig.jpeg", "/demon/tanjiro.jpeg","/demon/pic1.jpeg", 
@@ -32,7 +31,10 @@ const InfiniteZPage = () => {
         usecasecode=''
         props={component.props}
         features={component.features} 
-        component={<Swift images={images} backText='Anime'/>}/>
+        component={
+        // <Swift images={images} backText='Anime'/>
+        <FloatingTestimonials/>
+        }/>
     </div>
   )
 }

@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "components/cli-access/react/dropdown.jsx"  ],
   "exclude": [
     "node_modules"
   ]
