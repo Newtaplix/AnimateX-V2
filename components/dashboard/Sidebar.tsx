@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { Blocks, Drama, Flower, MousePointer, Text, Zap } from 'lucide-react'
+import { Blocks, Drama, Flower, MousePointer, Text, TextCursor, TextCursorInput, Zap } from 'lucide-react'
 import Link from 'next/link'
 import clsx from "clsx"
 import { useNavToggle } from '@/utils/store'
@@ -71,6 +71,17 @@ export const Sidebar = () => {
                  {
                     text: "Loading",
                     link: "/components/loadingbtn",
+                    tag: ""
+                }
+            ]
+        },
+        {
+            category: "Inputs",
+            icon: <TextCursor size={18}/>,
+            content: [
+                {
+                    text: "DropDown",
+                    link: "/components/dropdown",
                     tag: ""
                 }
             ]
