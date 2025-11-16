@@ -72,6 +72,11 @@ export const Sidebar = () => {
                     text: "Loading",
                     link: "/components/loadingbtn",
                     tag: ""
+                },
+                 {
+                    text: "Theme Toggler",
+                    link: "/components/themetoggler",
+                    tag: ""
                 }
             ]
         },

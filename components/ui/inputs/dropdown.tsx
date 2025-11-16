@@ -107,8 +107,8 @@ export const DropDown = ({defaultOption={text: "", value: ""}, stagger, layered=
     } 
 
   return (
-    <m.div ref={triggerRef}  onClick={() => setIsOpen(!isOpen)} 
-    className={cn('p-2 rounded-xl flex items-center z-10 cursor-pointer dark:bg-neutral-950 dark:border-neutral-900 dark:border-2 bg-gray-50 relative justify-between px-4 border w-80 border-gray-100',
+    <div ref={triggerRef}  onClick={() => setIsOpen(!isOpen)} 
+    className={cn('p-2 rounded-xl flex items-center z-20 cursor-pointer dark:bg-neutral-950 dark:border-neutral-900 dark:border-2 bg-gray-50 relative justify-between px-4 border w-80 border-gray-100',
         className && className
     )}>
         {
@@ -124,7 +124,7 @@ export const DropDown = ({defaultOption={text: "", value: ""}, stagger, layered=
                 initial="initial"
                 animate="visible"
                 exit="initial" 
-                className={cn('absolute w-full rounded-xl text-[14px] overflow-hidden left-0 dark:bg-neutral-950 dark:border-neutral-900 dark:border-2 bg-white border border-gray-100',
+                className={cn('absolute w-full menu rounded-xl text-[14px] overflow-hidden left-0 dark:bg-neutral-950 dark:border-neutral-900 dark:border-2 bg-white border border-gray-100',
                     direction === "up" ? "-top-1 -translate-y-full" : "translate-y-full -bottom-1",
                     menuStyle && menuStyle
                 )}>
@@ -158,7 +158,7 @@ export const DropDown = ({defaultOption={text: "", value: ""}, stagger, layered=
                 </m.div>  
             }
         </AnimatePresence>
-    </m.div>
+    </div>
   )
 }
 

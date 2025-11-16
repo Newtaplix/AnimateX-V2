@@ -39,6 +39,7 @@
 }
 
 
+
 body{
   background: var(--bg);
   color: var(--fg);
@@ -101,6 +102,14 @@ p{
 }
 .title{
   @apply text-xl md:text-2xl lg:text-3xl
+}
+
+
+.menu::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
 /* Mobile responsive improvements */

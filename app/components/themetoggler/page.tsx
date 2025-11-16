@@ -2,8 +2,9 @@
 import PageLayout from '@/components/dashboard/PageLayout'
 import React from 'react'
 import { DropDown, code, codejs, usecase } from '@/components/ui/inputs/dropdown'
+import { ThemeToggler } from '@/components/ui/buttons/theme'
 
-const DropDownPage = () => {
+const ThemeTogglerPage = () => {
     const [text, setText] = React.useState("")
      const values = [
         {value: "velocity", text: "Velocity"},
@@ -11,13 +12,7 @@ const DropDownPage = () => {
         {value: "animatex", text: "AnimateX"}
     ]
     const component = {
-        block: 
-        <div className='flex flex-col items-center justify-center'>
-          { <p className='mb-4 w-fit'>You selected: {text}</p>}
-          <DropDown options={values} 
-          onChange={(value) => setText(value)} 
-          defaultOption = {{text: "Message", value: "love"}} />
-        </div>,
+        block: <ThemeToggler/>,
         features: [
           "Easily customizable with props",
           "Blur effect giving that smooth effect",
@@ -134,4 +129,4 @@ const DropDownPage = () => {
   )
 }
 
-export default DropDownPage
+export default ThemeTogglerPage
