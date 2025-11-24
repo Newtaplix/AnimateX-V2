@@ -6,6 +6,10 @@ import { cn } from '@/lib/utils'
 import { Moon, Sun } from 'lucide-react'
 
 
+interface ThemeToggleProps {
+    simple?: boolean
+}
+
 
 export const ThemeWrapper = ({children}:{children:React.ReactNode}) => {
   return (
@@ -20,7 +24,7 @@ export const ThemeWrapper = ({children}:{children:React.ReactNode}) => {
   )
 }
 
-export const ThemeToggler = () => {
+export const ThemeToggler = ({simple = false}: ThemeToggleProps) => {
   const { theme, setTheme} = useTheme()
   const LightIconVariants: Variants = {
     "hidden": {
@@ -62,8 +66,16 @@ export const ThemeToggler = () => {
     if(!document.startViewTransition) ThemeControl()
     document.startViewTransition(ThemeControl)
   }
+
+  const ThemeSwitch = () => {
+    if(simple){
+        ThemeControl()
+    }else{
+        MakeTransition()
+    }
+  }
   return (
-    <div onClick={MakeTransition} 
+    <div onClick={ThemeSwitch} 
     className={cn('w-14 p-[1px] flex items-center cursor-pointer bg-gray-50 dark:bg-neutral-800 rounded-full border-2 border-col',
       theme === "dark" ? "flex-row-reverse" : "justify-start"
     )}>
