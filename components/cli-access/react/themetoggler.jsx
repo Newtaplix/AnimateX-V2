@@ -1,12 +1,11 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
-import { useState } from 'react'
 import { AnimatePresence, motion as m } from 'motion/react'
-import { cn } from '@/lib/utils'
+import { cn } from '../../lib/utils'
 import { Moon, Sun } from 'lucide-react'
 
 const ThemeProvider = createContext()
-const ThemeWrapper = ({ children }) => {
+export const ThemeWrapper = ({ children }) => {
     const [theme, setTheme] = useState(() => {
        return localStorage.getItem("theme") || "light"
     })
@@ -35,13 +34,18 @@ const ThemeWrapper = ({ children }) => {
         </ThemeProvider.Provider>
     )
 }
-export const useTheme = () => useContext(ThemeWrapper)
-
+export const useTheme = () => {
+  const context = useContext(ThemeProvider);
+  if (!context) {
+    throw new Error("useTheme must be used inside ThemeProvider");
+  }
+  return context;
+};
 
 
 export const ThemeToggler = () => {
   
-  const { theme, setTheme} = useTheme()
+  const { theme, toggleTheme} = useTheme()
 
   const LightIconVariants = {
     "hidden": {
@@ -71,17 +75,17 @@ export const ThemeToggler = () => {
 
   }
 
-  const ThemeControl = () => {
-    if(theme === "light"){
-      setTheme("dark")
-    }else{
-      setTheme("light")
-    }
-  }
+  // const ThemeControl = () => {
+  //   if(theme === "light"){
+  //     setTheme("dark")
+  //   }else{
+  //     setTheme("light")
+  //   }
+  // }
 
   const MakeTransition = () => {
-    if(!document.startViewTransition) ThemeControl()
-    document.startViewTransition(ThemeControl)
+    if(!document.startViewTransition) toggleTheme()
+    document.startViewTransition(toggleTheme)
   }
   return (
     <div onClick={MakeTransition} 
