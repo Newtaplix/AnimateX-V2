@@ -43,7 +43,7 @@ export const useTheme = () => {
 };
 
 
-export const ThemeToggler = () => {
+export const ThemeToggler = ({simple}) => {
   
   const { theme, toggleTheme} = useTheme()
 
@@ -87,8 +87,16 @@ export const ThemeToggler = () => {
     if(!document.startViewTransition) toggleTheme()
     document.startViewTransition(toggleTheme)
   }
+
+  const SwitchTheme = () => {
+    if(simple){
+      toggleTheme()
+    }else{
+      MakeTransition()
+    }
+  }
   return (
-    <div onClick={MakeTransition} 
+    <div onClick={SwitchTheme} 
     className={cn('w-14 p-[1px] flex items-center cursor-pointer bg-gray-50 dark:bg-neutral-800 rounded-full border-2 border-col',
       theme === "dark" ? "flex-row-reverse" : "justify-start"
     )}>
