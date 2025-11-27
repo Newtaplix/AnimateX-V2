@@ -142,6 +142,11 @@ export const Sidebar = () => {
                     text: "Flip",
                     link: "/components/flip",
                     tag: "Pro"
+                },
+                {
+                    text: "Light Card",
+                    link: "/components/lightcard",
+                    tag: "Pro"
                 }
             ]
 
